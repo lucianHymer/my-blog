@@ -1,34 +1,46 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import { useState } from "react";
+import "./App.css";
+import background from "./assets/utopia.jpg";
+import backgroundTop from "./assets/top.png";
+import backgroundBottom from "./assets/bottom.png";
+import backgroundBottomShorter from "./assets/shorter.png";
+import headshot from "./assets/headshot.png";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [open, setOpen] = useState(false);
 
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div onMouseMove={() => setOpen(true)} className={`App`}>
+      <img
+        className={`background fade-out-bg ${open ? "is-hidden" : ""}`}
+        src={background}
+      />
+      <img
+        className={`background fade-out-bottom ${open ? "is-hidden" : ""}`}
+        src={backgroundBottom}
+      />
+      <img
+        className={`background fade-in-bottom-shorter ${
+          open ? "is-visible" : ""
+        }`}
+        src={backgroundBottomShorter}
+      />
+      <img
+        className={`background fade-in-top ${open ? "is-visible" : ""}`}
+        src={backgroundTop}
+      />
+      <div className="scrollBox">
+        <div className={`contents ${open ? "is-visible" : ""}`}>
+          <img className="headshot" src={headshot} />
+          <div className="card">
+            <p>Lucian is a computer engineer and techno-optimist</p>
+            <p>More info coming soon...</p>
+          </div>
+        </div>
+        <div className="scrollPadding"></div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
