@@ -11,25 +11,19 @@ function App() {
 
   return (
     <div onMouseMove={() => setOpen(true)} className={`App`}>
-      <img
-        className={`background fade-out-bg ${open ? "is-hidden" : ""}`}
-        src={background}
-      />
-      <img
-        className={`background fade-out-bottom ${open ? "is-hidden" : ""}`}
-        src={backgroundBottom}
-      />
-      <img
-        className={`background fade-in-bottom-shorter ${
-          open ? "is-visible" : ""
-        }`}
-        src={backgroundBottomShorter}
-      />
-      <img
-        className={`background fade-in-top ${open ? "is-visible" : ""}`}
-        src={backgroundTop}
-      />
       <div className="scrollBox">
+        <img
+          className={`background fade-out-bg ${open ? "is-hidden" : ""}`}
+          src={background}
+        />
+        <img
+          className={`background fade-out-bottom ${open ? "is-hidden" : ""}`}
+          src={backgroundBottom}
+        />
+        <img
+          className={`background fade-in-top ${open ? "is-visible" : ""}`}
+          src={backgroundTop}
+        />
         <div className={`contents ${open ? "is-visible" : ""}`}>
           <img className="headshot" src={headshot} />
           <div className="card">
@@ -38,6 +32,12 @@ function App() {
           </div>
         </div>
         <div className="scrollPadding"></div>
+        <img
+          className={`background fade-in-bottom-shorter ${
+            open ? "is-visible" : ""
+          }`}
+          src={backgroundBottomShorter}
+        />
       </div>
     </div>
   );
