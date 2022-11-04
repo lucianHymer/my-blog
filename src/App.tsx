@@ -6,6 +6,8 @@ import backgroundBottom from "./assets/bottom.png";
 import backgroundBottomShorter from "./assets/shorter.png";
 import headshot from "./assets/headshot.png";
 
+import Bio from "./components/Bio.tsx";
+
 function App() {
   const [open, setOpen] = useState(false);
 
@@ -26,10 +28,7 @@ function App() {
         />
         <div className={`contents ${open ? "is-visible" : ""}`}>
           <img className="headshot" src={headshot} />
-          <div className="card">
-            <p>Lucian is a computer engineer and techno-optimist</p>
-            <p>More info coming soon...</p>
-          </div>
+          <Bio />
         </div>
         <div className="scrollPadding"></div>
         <img
