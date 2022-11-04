@@ -14,6 +14,7 @@
 body, html {
   height: 100%;
   overflow: hidden;
+  color: #5e6a89;
 }
 
 .App {
@@ -42,7 +43,6 @@ div.contents {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  color: #3d4e5c;
   padding: 2em;
   opacity: 0;
   visibility: hidden;
@@ -55,6 +55,23 @@ div.contents {
 div.contents.is-visible {
   opacity: 1;
   visibility: visible;
+}
+
+div.enterTip {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  top: 5%;
+  transform: translate(-50%,0%);
+  opacity: 1;
+  visibility: visible;
+  transition: opacity var(--transition-short) ease-out, visibility var(--transition-short) ease-out;
+  will-change: opacity, visibility;
+}
+
+div.enterTip.is-hidden {
+  opacity: 0;
+  visibility: hidden;
 }
 
 img.headshot {
