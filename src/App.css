@@ -37,11 +37,12 @@ div.scrollPadding {
 }
 
 div.contents {
-  margin-top: 20vh;
+  margin-top: 22vh;
   min-height: min-content;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  align-items: center;
   color: #3d4e5c;
   padding: 2em;
   opacity: 0;
@@ -139,6 +140,14 @@ img.background {
 }
 
 .smallIcon {
-  width: 5em;
+  width: 3em;
   height: auto;
+}
+
+.flexCenter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+
 }
