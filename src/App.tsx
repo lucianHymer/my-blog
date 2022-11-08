@@ -5,7 +5,7 @@ import backgroundTop from "./assets/top.png";
 import backgroundBottom from "./assets/bottom.png";
 import backgroundBottomShorter from "./assets/shorter.png";
 
-import Bio from "./components/Bio.tsx";
+import Bio from "./components/Bio";
 
 function App() {
   const [open, setOpen] = useState(false);

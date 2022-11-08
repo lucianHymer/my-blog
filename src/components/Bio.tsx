@@ -6,7 +6,13 @@ import substack from "../assets/substack.png";
 import headshot from "../assets/headshot.png";
 //import "./Bio.css";
 
-function IconLink(props) {
+interface IconLinkProps {
+  icon: string;
+  url: string;
+  text: string;
+}
+
+function IconLink(props: IconLinkProps) {
   const { icon, url, text } = props;
 
   return (
