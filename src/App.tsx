@@ -4,7 +4,6 @@ import background from "./assets/utopia.jpg";
 import backgroundTop from "./assets/top.png";
 import backgroundBottom from "./assets/bottom.png";
 import backgroundBottomShorter from "./assets/shorter.png";
-import headshot from "./assets/headshot.png";
 
 import Bio from "./components/Bio.tsx";
 
@@ -26,8 +25,7 @@ function App() {
           className={`background fade-in-top ${open ? "is-visible" : ""}`}
           src={backgroundTop}
         />
-        <div className={`contents ${open ? "is-visible" : ""}`}>
-          <img className="headshot" src={headshot} />
+        <div className={`flexSpaceEvenly contents ${open ? "is-visible" : ""}`}>
           <Bio />
         </div>
         <div className="scrollPadding"></div>
