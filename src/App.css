@@ -14,6 +14,7 @@
 body, html {
   height: 100%;
   overflow: hidden;
+  color: #5e6a89;
 }
 
 .App {
@@ -75,6 +76,23 @@ img.headshot {
 div.contents.is-visible {
   opacity: 1;
   visibility: visible;
+}
+
+div.enterTip {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  top: 5%;
+  transform: translate(-50%,0%);
+  opacity: 1;
+  visibility: visible;
+  transition: opacity var(--transition-short) ease-out, visibility var(--transition-short) ease-out;
+  will-change: opacity, visibility;
+}
+
+div.enterTip.is-hidden {
+  opacity: 0;
+  visibility: hidden;
 }
 
 img.background {

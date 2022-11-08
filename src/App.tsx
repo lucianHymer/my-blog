@@ -11,8 +11,11 @@ function App() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div onMouseMove={() => setOpen(true)} className={`App`}>
+    <div onClick={() => setOpen(true)} className={`App`}>
       <div className="scrollBox">
+        <div className={`enterTip ${open ? "is-hidden" : ""}`}>
+          <p>Tap Anywhere to Enter</p>
+        </div>
         <img
           className={`background fade-out-bg ${open ? "is-hidden" : ""}`}
           src={background}
