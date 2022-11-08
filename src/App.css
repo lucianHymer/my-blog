@@ -180,3 +180,15 @@ img.background {
   gap: 20px;
 
 }
+
+.artRef {
+  text-align: left;
+  max-width: 70%;
+  top: 0.5em;
+  left: 1em;
+  line-height: 1;
+  position: absolute;
+  z-index: 2;
+  color: #a6afbf;
+  font-size: xx-small;
+}

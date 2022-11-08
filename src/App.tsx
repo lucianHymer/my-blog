@@ -38,6 +38,10 @@ function App() {
           }`}
           src={backgroundBottomShorter}
         />
+        <div className="artRef">
+          Original Artwork: Utopia City 2080 by Reinventing Society / Damian
+          Krzywonos, CC BY-NC-SA 4.0
+        </div>
       </div>
     </div>
   );
